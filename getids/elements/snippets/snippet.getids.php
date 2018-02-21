@@ -20,17 +20,26 @@
  *  p : parents resources                           c : children resources
  *  s : provide a subsample of children             '': current resource
  *
- * sampleSize - number of children to provide in a subsample of children
+ * sampleSize - number of children to provide in a subsample of children (defaults to 10 if not provided)
  *
  * invert - inverts the output so that instead of short listing the IDs it lists IDs to remove in long form
  *
  * e.g:
  *
- * &ids=`18, c18, -c21, 34` : include #18 and children of #18, exclude chidren of #21 but keep #34
+ * &ids=`18, c18, -c21, 34`       : include #18 and children of #18, exclude chidren of #21 but keep #34
  *
- * &ids=`p12, -p3, -1, 2`   : include all parents of #12, exclude parents of #3 but keep #2
+ * &ids=`p12, -p3, -1, 2`         : include all parents of #12, exclude parents of #3 but keep #2
  *
- * &ids=`18, c18, p3, -p2`  : include #8 and children of #8, include parents of #3, exclude parent of #2
+ * &ids=`c0, s18` &sampleSize=`5` : include all resources in the site, then remove all children of 18 and add 
+ * back 5 children of 18
+ *
+ *
+ * NOTE ON SUBSAMPLING: the way subsampling works is that it selects all child IDs and sorts them in numerical
+ * order. It always includes both the first and last options and then an even spacing in between. This makes
+ * the results reliable in terms of always choosing the same resources when the same range is available.
+ *
+ * e.g. if there are 10 IDs numbered 1 to 10 and we ask for a subsample of 3, the results will reliably be 
+ * IDs 1,5,10.
  *
  *
  * IMPORTANT: take care of the order of arguments. To be excluded the id should be already in tihe list
@@ -115,7 +124,6 @@ foreach ($ids as $id) {
                 sort($tmp); // Sort to make sure we get the same order every time
                 $subsample = array();
                 $subSample[] = $tmp[0];   // Put the very first value into the temp array
-                $subSample[] = $tmp[0];
                 for($i=1;$i<=$sampleSize-1;$i++) { // Minus 1 because we want sampleSize-1 pieces
                     //echo round(($i/$sampleSize) * count($tmp))-1 . " | ";
                     $subSample[] = $tmp[round(($i/$sampleSize) * count($tmp))-1];
