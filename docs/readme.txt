@@ -1,6 +1,6 @@
 # GetIds
 
-Version: 1.2
+Version: 1.2.0-rc1
 
 Date: 2018.02.22
 
@@ -18,11 +18,19 @@ Released under GNU Public License 2.0 https://opensource.org/licenses/GPL-2.0
 
 **ids** - Comma-delimited list of resource ids serving as parents, child or resource
 
-ids as [ [+| |-] [c| |p|s]integer ] where:
+ids as `[ [+| |-] [c| |p|s]integer ]` where:
 
-- : exclude ids             + or '' : include ids (default)
-p : parents resources                           c : children resources
-s : provide a subsample of children             '': current resource
+`-` : exclude ids
+
+`+` or `''` : include ids (default)
+
+`p` : parents resources
+
+`c` : children resources
+
+`s` : provide a subsample of children
+
+`''` : current resource
 
 **sampleSize** - number of children to provide in a subsample of children (defaults to 10 if not provided)
 
@@ -56,4 +64,4 @@ IDs 1,5,10.
 
 
 **Important:** take care of the order of arguments. To be excluded the id should be already in tihe list
-&ids=`18, 19, -19, 20` => '18,20'          but &ids=`18, -19, 19, 20` => '18,19,20'
+``` &ids=`18, 19, -19, 20` ``` => ``` '18,20' ``` but ``` &ids=`18, -19, 19, 20` ``` => ``` '18,19,20' ```.

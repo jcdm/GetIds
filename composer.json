@@ -34,7 +34,7 @@
         "package_name": "GetIds",
         "namespace": "getids",
         "version": "1.2.0",
-        "release": "pl",
+        "release": "rc1",
         "category":"GetIds",
         "docs_path" : "docs/"
     }

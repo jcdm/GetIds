@@ -1,19 +1,20 @@
 Changelog for GetIds snippet.
 
-GetIds 1.2
-----------
+GetIds 1.2.0-rc1
+---------------
 
-- Add subsample and invert functionality.
-- Migrate to RepoMan for building MODX extra
-- Update documentation
+- RC built using RepoMan
+- Migrate entire project over to RepoMan based on their demo repo
+- Add subsample and invert functionality
+- Full usage docs moved to readme and formatted with markdown
 
-GetIds 1.1
-----------
+GetIds 1.1.0
+--------------
 
 - Adds all-children functionality
-- Adds the ability to us c0 to add all top level pages to the list of IDs.
+- Adds the ability to us c0 to add all top level pages to the list of IDs
 
-GetIds 1.0
-----------
+GetIds 1.0.0
+--------------
 
-- Initial Version that I copied from https://github.com/craftsmancoding/repo-starter
+- Initial version created by Coroico at https://github.com/Coroico/GetIds
