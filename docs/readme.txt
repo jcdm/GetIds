@@ -1,7 +1,9 @@
 # GetIds
 
 Version: 1.2
+
 Date: 2018.02.22
+
 Authors: Coroicor, jcdm, jonathanhaslett
 
 A general purpose snippet to get a list of resource ids for MODX Revolution.
