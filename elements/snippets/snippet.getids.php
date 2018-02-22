@@ -1,50 +1,11 @@
 <?php
 /**
- * getIds
- *
- * A general purpose snippet to get a list of resource ids for MODx 2.0.
- *
- * @author Coroicor
+ * @name GetIds
+ * @description A general purpose snippet to get a list of resource ids for MODX Revolution.
+ * @author Coroicor, jcdm, jonathanhaslett
  * @copyright Copyright 2010, Coroico
- * @version 1.0.0-pl - November 27, 2010
- *
- * [[!GetIds? &depth=`5` &ids=`8,-c10,12,3,c3` &sampleSize=`10` &invert=`1`]]
- *
- * depth - (Opt) Integer value indicating depth to search for resources from each parent
- *
- * ids - Comma-delimited list of resource ids serving as parents, child or resource
- *
- * ids as [ [+| |-] [c| |p|s]integer ] where:
- *
- *  - : exclude ids             + or '' : include ids (default)
- *  p : parents resources                           c : children resources
- *  s : provide a subsample of children             '': current resource
- *
- * sampleSize - number of children to provide in a subsample of children (defaults to 10 if not provided)
- *
- * invert - inverts the output so that instead of short listing the IDs it lists IDs to remove in long form
- *
- * e.g:
- *
- * &ids=`18, c18, -c21, 34`       : include #18 and children of #18, exclude chidren of #21 but keep #34
- *
- * &ids=`p12, -p3, -1, 2`         : include all parents of #12, exclude parents of #3 but keep #2
- *
- * &ids=`c0, s18` &sampleSize=`5` : include all resources in the site, then remove all children of 18 and add 
- * back 5 children of 18
- *
- *
- * NOTE ON SUBSAMPLING: the way subsampling works is that it selects all child IDs and sorts them in numerical
- * order. It always includes both the first and last options and then an even spacing in between. This makes
- * the results reliable in terms of always choosing the same resources when the same range is available.
- *
- * e.g. if there are 10 IDs numbered 1 to 10 and we ask for a subsample of 3, the results will reliably be 
- * IDs 1,5,10.
- *
- *
- * IMPORTANT: take care of the order of arguments. To be excluded the id should be already in tihe list
- * &ids=`18, 19, -19, 20` => '18,20'          but &ids=`18, -19, 19, 20` => '18,19,20'
- *
+ * @license https://opensource.org/licenses/GPL-2.0 GNU Public License
+ * @version 1.2.0-pl - February 22, 2018
  */
 
 /* set default properties */

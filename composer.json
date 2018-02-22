@@ -1,0 +1,41 @@
+{
+    "name": "dashmeida/GetIds",
+    "description": "A general purpose snippet to get a list of resource ids for MODX Revolution.",
+    "type": "modx-package",
+    "keywords": ["modx","repoman"],
+    "homepage": "https://github.com/DashMedia/GetIds",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Coroicor",
+            "homepage" : "https://github.com/Coroico/GetIds"
+        },
+        {
+            "name": "jcdm",
+            "homepage" : "https://github.com/jcdm/GetIds"
+        },
+        {
+            "name": "jonathanhaslett",
+            "homepage" : "https://github.com/Coroico/GetIds"
+        }
+    ],
+    "support": {
+      "email": "modx@dashmedia.com.au",
+      "issues": "https://github.com/DashMedia/GetIds/issues",
+      "source": "https://github.com/DashMedia/GetIds.git"
+    },
+    "require": {
+        "php": ">=5.3"
+    },
+    "autoload": {
+        "classmap":["model/"]
+    },
+    "extra": {
+        "package_name": "GetIds",
+        "namespace": "getids",
+        "version": "1.2.0",
+        "release": "pl",
+        "category":"GetIds",
+        "docs_path" : "docs/"
+    }
+}

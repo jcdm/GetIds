@@ -1,0 +1,19 @@
+Changelog for GetIds snippet.
+
+GetIds 1.2
+----------
+
+- Add subsample and invert functionality.
+- Migrate to RepoMan for building MODX extra
+- Update documentation
+
+GetIds 1.1
+----------
+
+- Adds all-children functionality
+- Adds the ability to us c0 to add all top level pages to the list of IDs.
+
+GetIds 1.0
+----------
+
+- Initial Version that I copied from https://github.com/craftsmancoding/repo-starter
