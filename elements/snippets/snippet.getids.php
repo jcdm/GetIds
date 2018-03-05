@@ -6,14 +6,12 @@
  * @copyright Copyright 2010, Coroico
  * @license https://opensource.org/licenses/GPL-2.0 GNU Public License
  * @version 1.2.0-pl - February 22, 2018
- *
- * Read the docs at https://github.com/DashMedia/GetIds
  */
 
 /* set default properties */
 $ids = (!empty($ids) || $ids === '0') ? explode(',', $ids) : array($modx->resource->get('id'));
-$depth = isset($depth) ? (integer) $depth : $scriptProperties['depth'];
-$sampleSize = (isset($sampleSize) && $sampleSize !== "") ? intval($sampleSize) : 10;
+$depth = isset($depth) ? (integer) $depth : $modx->getOption('getids.depth');
+$sampleSize = (isset($sampleSize) && $sampleSize !== "") ? intval($sampleSize) : $modx->getOption('getids.subsample_size');
 
 $ids = array_map('trim',$ids);
 $resIds = array();
@@ -137,4 +135,3 @@ if ($invert == 1) {
 };
 
 return $lstIds;
-//return ",".$lstIds.",";
