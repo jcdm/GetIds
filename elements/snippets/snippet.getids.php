@@ -5,7 +5,7 @@
  * @author Coroicor, jcdm, jonathanhaslett
  * @copyright Copyright 2010, Coroico
  * @license https://opensource.org/licenses/GPL-2.0 GNU Public License
- * @version 1.2.0-pl - February 22, 2018
+ * @version 1.2.1-pl - March 6, 2018
  *
  * Read the docs at https://github.com/DashMedia/GetIds
  */

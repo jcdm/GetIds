@@ -1,6 +1,6 @@
 # GetIds
 
-Version: 1.2.0-rc1
+Version: 1.2.1-rc1
 
 Date: 2018.02.22
 
