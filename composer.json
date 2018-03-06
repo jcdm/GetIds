@@ -33,9 +33,10 @@
     "extra": {
         "package_name": "GetIds",
         "namespace": "getids",
-        "version": "1.2.0",
+        "version": "1.2.1",
         "release": "rc1",
         "category":"GetIds",
-        "docs_path" : "docs/"
+        "docs_path" : "docs/",
+        "seeds_path": ["model/seeds/"]
     }
 }

@@ -1,5 +1,10 @@
 Changelog for GetIds snippet.
 
+GetIds 1.2.1-rc1
+---------------
+
+- Moved the settings from snippet properties to system settings
+
 GetIds 1.2.0-rc1
 ---------------
 
