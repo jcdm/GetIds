@@ -1,5 +1,5 @@
 {
-    "name": "dashmeida/GetIds",
+    "name": "dashmedia/GetIds",
     "description": "A general purpose snippet to get a list of resource ids for MODX Revolution.",
     "type": "modx-package",
     "keywords": ["modx","repoman"],
